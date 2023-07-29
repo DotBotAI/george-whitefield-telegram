@@ -1,4 +1,4 @@
-# ChatGPT Telegram Bot
+# George Whitefield Telegram Bot
 
 This is a Telegram chat bot built using the ChatGPT (GPT-3.5 or GPT-4) language model from OpenAI.
 
