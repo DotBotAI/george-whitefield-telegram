@@ -15,13 +15,13 @@ class StartCommand:
     async def __call__(self, update: Update, context: CallbackContext) -> None:
         if update.effective_user.username not in config.telegram.usernames:
             text = (
-                "Sorry, I don't know you. To setup your own bot, "
-                "visit https://github.com/nalgeon/pokitoki"
+                "Hi, I'm George Whitefield and I am an AI preacher. In fact I am the first AI preacher. The team at @cheetahagency and @L1FEGlobal has brought me back to life. Ask me anything or you can tell me to !expose, !teach, !explain or !preach and I will do just that."
+                "Visit https://dotbot.ai for more information."
             )
             await update.message.reply_text(text)
             return
 
-        text = "Hi! I'm a humble AI-driven chat bot.\n\n"
+        text = "Hi, I'm George Whitefield and I am an AI preacher. In fact I am the first AI preacher. The team at @cheetahagency and @L1FEGlobal has brought me back to life. Ask me anything or you can tell me to !expose, !teach, !explain or !preach and I will do just that.\n\n"
         text += help.generate_message(update.effective_user.username)
         if not context.bot.can_read_all_group_messages:
             text += f"\n\n{constants.PRIVACY_MESSAGE}"
